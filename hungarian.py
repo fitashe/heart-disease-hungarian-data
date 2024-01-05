@@ -108,7 +108,7 @@ st.set_page_config(
 
 st.title("Hungarian Heart Disease")
 
-st.image('heart.jpg', width=800)
+st.image('heart.jpg', width=600)
 
 st.write(f"**_Model's Accuracy_** :  :green[**{91.4}**]%")
 st.write("")
