@@ -118,6 +118,15 @@ tab1, tab2 = st.tabs(["Single-predict", "Multi-predict"])
 with tab1:
   st.sidebar.header("**User Input** Sidebar")
 
+  st.markdown(
+      """
+      <style>
+      .st-dl { background-color: #FF5733; }
+      </style>
+      """,
+      unsafe_allow_html=True
+  )
+  
   age = st.sidebar.number_input(label=":blue[**Age**]", min_value=df_final['age'].min(), max_value=df_final['age'].max())
   st.sidebar.write(f":orange[Min] value: :orange[**{df_final['age'].min()}**], :red[Max] value: :red[**{df_final['age'].max()}**]")
   st.sidebar.write("")
@@ -221,7 +230,7 @@ with tab1:
 
   result = ":violet[-]"
 
-  predict_btn = st.button("**Predict**", type="success")
+  predict_btn = st.button("**Predict**", type="info")
 
   st.write("")
   if predict_btn:
@@ -259,6 +268,15 @@ with tab1:
 with tab2:
   st.header("Predict multiple data:")
 
+  st.markdown(
+      """
+      <style>
+      .st-dl { background-color: #3399FF; }
+      </style>
+      """,
+      unsafe_allow_html=True
+  )
+  
   sample_csv = df_final.iloc[:5, :-1].to_csv(index=False).encode('utf-8')
 
   st.write("")
