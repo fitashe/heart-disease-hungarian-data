@@ -110,6 +110,7 @@ st.title("Hungarian Heart Disease")
 st.write(f"**_Model's Accuracy_** :  :green[**{91.4}**]%")
 st.write("")
 
+st.image(https://www.freepik.com/free-vector/tiny-doctors-studying-huge-human-heart-cardiologists-examining-patient-with-cardiovascular-disease-flat-vector-illustration-health-diagnosis-cardiology-concept-banner-landing-web-page_24644947.htm#query=heart%20disease&position=42&from_view=search&track=ais&uuid=514a6ba9-3b70-4b33-a125-93cf849a30e0, width=200)
 tab1, tab2 = st.tabs(["Single-predict", "Multi-predict"])
 
 with tab1:
