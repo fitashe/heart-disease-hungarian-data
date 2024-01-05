@@ -230,7 +230,7 @@ with tab1:
 
   result = ":violet[-]"
 
-  predict_btn = st.button("**Predict**", type="info")
+  predict_btn = st.button("**Predict**", type="primary")
 
   st.write("")
   if predict_btn:
