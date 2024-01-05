@@ -86,7 +86,7 @@ y = df_clean['target']
 smote = SMOTE(random_state=42)
 X, y = smote.fit_resample(X, y)
 
-model = pickle.load(open("model/xgb_model.pkl", 'rb'))
+model = pickle.load(open("model/model_knn.pkl", 'rb'))
 
 y_pred = model.predict(X)
 accuracy = accuracy_score(y, y_pred)
@@ -104,7 +104,7 @@ st.set_page_config(
 )
 
 st.title("Hungarian Heart Disease")
-st.write(f"**_Model's Accuracy_** :  :green[**{accuracy}**]% (:red[_Do not copy outright_])")
+# st.write(f"**_Model's Accuracy_** :  :green[**{accuracy}**]% (:red[_Do not copy outright_])")
 st.write("")
 
 tab1, tab2 = st.tabs(["Single-predict", "Multi-predict"])
