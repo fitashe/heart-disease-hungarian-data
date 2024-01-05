@@ -122,6 +122,7 @@ st.image('heart.jpg', width=600)
 st.write(f"**_Model's Accuracy_** :  :green[**{91.4}**]%")
 st.write("")
 
+# membuat tab
 tab1, tab2 = st.tabs(["Single-predict", "Multi-predict"])
 
 # konten untuk single prediksi
@@ -137,7 +138,8 @@ with tab1:
       """,
       unsafe_allow_html=True
   )
-  
+
+  # pemrosesan input pada tab 1
   age = st.sidebar.number_input(label=":blue[**Age**]", min_value=df_final['age'].min(), max_value=df_final['age'].max())
   st.sidebar.write(f":orange[Min] value: :orange[**{df_final['age'].min()}**], :red[Max] value: :red[**{df_final['age'].max()}**]")
   st.sidebar.write("")
@@ -241,6 +243,7 @@ with tab1:
 
   result = ":violet[-]"
 
+  # tombol prediksi
   predict_btn = st.button("**Predict**", type="primary")
 
   st.write("")
@@ -290,7 +293,8 @@ with tab2:
       """,
       unsafe_allow_html=True
   )
-  
+
+  # upload fie CSV pada tab prediksi multi
   sample_csv = df_final.iloc[:5, :-1].to_csv(index=False).encode('utf-8')
 
   st.write("")
@@ -300,10 +304,12 @@ with tab2:
   st.write("")
   file_uploaded = st.file_uploader("Upload a CSV file", type='csv')
 
+  # proses prediksi pada tab 2
   if file_uploaded:
     uploaded_df = pd.read_csv(file_uploaded)
     prediction_arr = model.predict(uploaded_df)
 
+    # menampilkan proses prediksi dengan progress bar
     bar = st.progress(0)
     status_text = st.empty()
 
