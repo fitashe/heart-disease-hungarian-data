@@ -333,18 +333,18 @@ with tab2:
 
 
 # Additional styling, you can customize these CSS styles
-st.markdown(
-    """
-    <style>
-        div[data-testid="stSidebar"] {
-            background-color: #DCF2F1;
-            padding: 10px;
-        }
-        .css-1l02zno {
-            font-size: 18px;
-            color: #333;
-        }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
+# st.markdown(
+#     """
+#     <style>
+#         div[data-testid="stSidebar"] {
+#             background-color: #DCF2F1;
+#             padding: 10px;
+#         }
+#         .css-1l02zno {
+#             font-size: 18px;
+#             color: #333;
+#         }
+#     </style>
+#     """,
+#     unsafe_allow_html=True,
+# )
