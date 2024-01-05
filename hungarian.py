@@ -221,10 +221,7 @@ with tab1:
 
   result = ":violet[-]"
 
-  # predict_btn = st.button("**Predict**", type="primary")
-  predict_btn = st.button("**Predict**", type="primary", key="predict_button")
-
-  predict_btn.bg_color = "#FF5733"
+  predict_btn = st.button("**Predict**", type="violet")
 
   st.write("")
   if predict_btn:
