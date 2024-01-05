@@ -92,7 +92,7 @@ model = pickle.load(open("model/xgb_model.pkl", 'rb'))
 #     model = pickle.load(model_file)
 
 y_pred = model.predict(X)
-accuracy = accuracy_score(y_test_normal, y_pred_xgb)
+accuracy = accuracy_score(y, y_pred)
 accuracy = round((accuracy * 100), 2)
 
 df_final = X
