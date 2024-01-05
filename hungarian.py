@@ -88,7 +88,7 @@ smote = SMOTE(random_state=42)
 X, y = smote.fit_resample(X, y)
 
 # model = pickle.load(open("model/model_knn.pkl", 'rb'))
-with open("model/model_knn.pkl", 'rb') as model_file:
+with open("model/knn_model.pkl", 'rb') as model_file:
     model = pickle.load(model_file)
 
 y_pred = model.predict(X)
