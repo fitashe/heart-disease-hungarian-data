@@ -87,9 +87,9 @@ y = df_clean['target']
 smote = SMOTE(random_state=42)
 X, y = smote.fit_resample(X, y)
 
-# model = pickle.load(open("model/model_knn.pkl", 'rb'))
-with open("model/knn_model.pkl", 'rb') as model_file:
-    model = pickle.load(model_file)
+model = pickle.load(open("model/knn_model.pkl", 'rb'))
+# with open("model/knn_model.pkl", 'rb') as model_file:
+#     model = pickle.load(model_file)
 
 y_pred = model.predict(X)
 accuracy = accuracy_score(y, y_pred)
