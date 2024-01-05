@@ -306,3 +306,21 @@ with tab2:
       st.dataframe(uploaded_result)
     with col2:
       st.dataframe(uploaded_df)
+
+
+# Additional styling, you can customize these CSS styles
+st.markdown(
+    """
+    <style>
+        div[data-testid="stSidebar"] {
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+        .css-1l02zno {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
