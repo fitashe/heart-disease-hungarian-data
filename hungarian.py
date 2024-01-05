@@ -268,14 +268,14 @@ with tab1:
 with tab2:
   st.header("Predict multiple data:")
 
-  st.markdown(
-      """
-      <style>
-      .st-dl { background-color: #3399FF; }
-      </style>
-      """,
-      unsafe_allow_html=True
-  )
+  # st.markdown(
+  #     """
+  #     <style>
+  #     .st-dl { background-color: #3399FF; }
+  #     </style>
+  #     """,
+  #     unsafe_allow_html=True
+  # )
   
   sample_csv = df_final.iloc[:5, :-1].to_csv(index=False).encode('utf-8')
 
